@@ -1,5 +1,3 @@
-import { inferRouterOutputs } from "@trpc/server";
-
 import { authRouter } from "./router/auth";
 import { userRouter } from "./router/user";
 import { createTRPCRouter } from "./trpc";

@@ -1,7 +1,7 @@
 {
   "name": "@ev/app",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "scripts": {
     "build": "next build",
     "clean": "git clean -xdf .next .turbo node_modules",

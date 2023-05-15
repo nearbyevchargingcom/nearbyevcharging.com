@@ -1,5 +1,5 @@
 {
-  "name": "@ev/app",
+  "name": "@nearbyevcharging.com/app",
   "version": "0.1.0",
   "private": false,
   "scripts": {
@@ -12,11 +12,11 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@ev/api": "*",
-    "@ev/auth": "*",
-    "@ev/db": "*",
-    "@ev/design-system": "*",
-    "@ev/tailwind-config": "*",
+    "@nearbyevcharging.com/api": "*",
+    "@nearbyevcharging.com/auth": "*",
+    "@nearbyevcharging.com/db": "*",
+    "@nearbyevcharging.com/design-system": "*",
+    "@nearbyevcharging.com/tailwind-config": "*",
     "@next/font": "^13.2.4",
     "@tanstack/react-query": "^4.24.10",
     "@trpc/client": "^10.14.0",
@@ -31,8 +31,8 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
-    "@ev/eslint-config": "*",
-    "@ev/tsconfig": "*",
+    "@nearbyevcharging.com/eslint-config": "*",
+    "@nearbyevcharging.com/tsconfig": "*",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",

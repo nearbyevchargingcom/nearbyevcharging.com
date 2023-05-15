@@ -2,7 +2,7 @@
 const config = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
-    project: "@ev/tsconfig/base.json",
+    project: "@nearbyevcharging.com/tsconfig/base.json",
   },
   extends: [
     "next",

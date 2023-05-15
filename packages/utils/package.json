@@ -1,5 +1,5 @@
 {
-  "name": "@ev/utils",
+  "name": "@nearbyevcharging.com/utils",
   "version": "0.0.0",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
@@ -16,8 +16,8 @@
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
   },
   "devDependencies": {
-    "@ev/eslint-config": "*",
-    "@ev/tsconfig": "*",
+    "@nearbyevcharging.com/eslint-config": "*",
+    "@nearbyevcharging.com/tsconfig": "*",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "clsx": "^1.2.1",

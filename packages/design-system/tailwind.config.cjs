@@ -2,7 +2,7 @@
 const config = {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
   // @ts-ignore
-  presets: [require("@ev/tailwind-config")],
+  presets: [require("@nearbyevcharging.com/tailwind-config")],
 };
 
 module.exports = config;

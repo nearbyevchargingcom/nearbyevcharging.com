@@ -1,4 +1,4 @@
-import { prisma } from "@ev/db";
+import { prisma } from "@nearbyevcharging.com/db";
 import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { type DefaultSession, type NextAuthOptions } from "next-auth";
 import DiscordProvider from "next-auth/providers/discord";

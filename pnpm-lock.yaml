@@ -12,7 +12,7 @@ importers:
       "@manypkg/cli":
         specifier: ^0.20.0
         version: 0.20.0
-      "@ev/eslint-config":
+      "@nearbyevcharging.com/eslint-config":
         specifier: "*"
         version: link:packages/config/eslint
       "@types/prettier":
@@ -46,19 +46,19 @@ importers:
 
   apps/app:
     dependencies:
-      "@ev/api":
+      "@nearbyevcharging.com/api":
         specifier: "*"
         version: link:../../packages/api
-      "@ev/auth":
+      "@nearbyevcharging.com/auth":
         specifier: "*"
         version: link:../../packages/auth
-      "@ev/db":
+      "@nearbyevcharging.com/db":
         specifier: "*"
         version: link:../../packages/db
-      "@ev/design-system":
+      "@nearbyevcharging.com/design-system":
         specifier: "*"
         version: link:../../packages/design-system
-      "@ev/tailwind-config":
+      "@nearbyevcharging.com/tailwind-config":
         specifier: "*"
         version: link:../../packages/config/tailwind
       "@next/font":
@@ -98,10 +98,10 @@ importers:
         specifier: ^3.20.6
         version: 3.20.6
     devDependencies:
-      "@ev/eslint-config":
+      "@nearbyevcharging.com/eslint-config":
         specifier: "*"
         version: link:../../packages/config/eslint
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../../packages/config/tsconfig
       "@types/node":
@@ -134,10 +134,10 @@ importers:
 
   packages/api:
     dependencies:
-      "@ev/auth":
+      "@nearbyevcharging.com/auth":
         specifier: "*"
         version: link:../auth
-      "@ev/db":
+      "@nearbyevcharging.com/db":
         specifier: "*"
         version: link:../db
       "@trpc/client":
@@ -153,10 +153,10 @@ importers:
         specifier: ^3.20.6
         version: 3.20.6
     devDependencies:
-      "@ev/eslint-config":
+      "@nearbyevcharging.com/eslint-config":
         specifier: "*"
         version: link:../config/eslint
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../config/tsconfig
       eslint:
@@ -168,7 +168,7 @@ importers:
 
   packages/auth:
     dependencies:
-      "@ev/db":
+      "@nearbyevcharging.com/db":
         specifier: "*"
         version: link:../db
       "@next-auth/prisma-adapter":
@@ -187,10 +187,10 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
     devDependencies:
-      "@ev/eslint-config":
+      "@nearbyevcharging.com/eslint-config":
         specifier: "*"
         version: link:../config/eslint
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../config/tsconfig
       eslint:
@@ -224,7 +224,7 @@ importers:
         specifier: 7.32.2
         version: 7.32.2(eslint@8.34.0)
     devDependencies:
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../tsconfig
       eslint:
@@ -254,7 +254,7 @@ importers:
         specifier: ^4.11.0
         version: 4.11.0(prisma@4.11.0)
     devDependencies:
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../config/tsconfig
       prisma:
@@ -266,16 +266,16 @@ importers:
 
   packages/design-system:
     devDependencies:
-      "@ev/eslint-config":
+      "@nearbyevcharging.com/eslint-config":
         specifier: "*"
         version: link:../config/eslint
-      "@ev/tailwind-config":
+      "@nearbyevcharging.com/tailwind-config":
         specifier: "*"
         version: link:../config/tailwind
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../config/tsconfig
-      "@ev/utils":
+      "@nearbyevcharging.com/utils":
         specifier: "*"
         version: link:../utils
       "@types/react":
@@ -305,10 +305,10 @@ importers:
 
   packages/utils:
     devDependencies:
-      "@ev/eslint-config":
+      "@nearbyevcharging.com/eslint-config":
         specifier: "*"
         version: link:../config/eslint
-      "@ev/tsconfig":
+      "@nearbyevcharging.com/tsconfig":
         specifier: "*"
         version: link:../config/tsconfig
       "@types/react":

@@ -5,7 +5,7 @@ export const authRouter = createTRPCRouter({
     return ctx.session;
   }),
   getSecretMessage: protectedProcedure.query(() => {
-    // testing type validation of overridden next-auth Session in @ev/auth package
+    // testing type validation of overridden next-auth Session in @nearbyevcharging.com/auth package
     return "you can see this secret message!";
   }),
 });

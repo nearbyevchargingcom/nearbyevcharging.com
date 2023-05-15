@@ -1,4 +1,4 @@
 {
-  "extends": "@ev/tsconfig/base.json",
+  "extends": "@nearbyevcharging.com/tsconfig/base.json",
   "include": ["src", "index.ts", "transformer.ts"]
 }

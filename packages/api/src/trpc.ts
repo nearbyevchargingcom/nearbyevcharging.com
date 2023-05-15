@@ -7,8 +7,8 @@
  * The pieces you will need to use are documented accordingly near the end
  */
 
-import { getServerSession, type Session } from "@ev/auth";
-import { prisma } from "@ev/db";
+import { getServerSession, type Session } from "@nearbyevcharging.com/auth";
+import { prisma } from "@nearbyevcharging.com/db";
 import { TRPCError, initTRPC } from "@trpc/server";
 import { type CreateNextContextOptions } from "@trpc/server/adapters/next";
 import superjson from "superjson";

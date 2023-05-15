@@ -3,7 +3,10 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@ev/", "@ev/eslint-config"],
+      "matchPackagePatterns": [
+        "^@nearbyevcharging.com/",
+        "@nearbyevcharging.com/eslint-config"
+      ],
       "enabled": false
     }
   ],

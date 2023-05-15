@@ -1,5 +1,5 @@
 import "~/styles/globals.css";
-import "@ev/design-system/styles.css";
+import "@nearbyevcharging.com/design-system/styles.css";
 import type { AppType } from "next/app";
 import { Inter } from "@next/font/google";
 import type { Session } from "next-auth";

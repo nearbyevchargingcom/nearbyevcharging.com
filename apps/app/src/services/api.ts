@@ -1,4 +1,4 @@
-import type { AppRouter } from "@ev/api";
+import type { AppRouter } from "@nearbyevcharging.com/api";
 import { httpBatchLink, loggerLink } from "@trpc/client";
 import { createTRPCNext } from "@trpc/next";
 import superjson from "superjson";
@@ -29,4 +29,7 @@ export const api = createTRPCNext<AppRouter>({
   ssr: false,
 });
 
-export { type RouterInputs, type RouterOutputs } from "@ev/api";
+export {
+  type RouterInputs,
+  type RouterOutputs,
+} from "@nearbyevcharging.com/api";

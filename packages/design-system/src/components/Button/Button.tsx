@@ -1,5 +1,5 @@
 import { forwardRef, type ComponentPropsWithoutRef } from "react";
-import { cn } from "@ev/utils";
+import { cn } from "@nearbyevcharging.com/utils";
 
 import { buttonVariants, type ButtonVariants } from "./Button.variants";
 

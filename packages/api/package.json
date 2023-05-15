@@ -1,5 +1,5 @@
 {
-  "name": "@ev/api",
+  "name": "@nearbyevcharging.com/api",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -11,16 +11,16 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@ev/auth": "*",
-    "@ev/db": "*",
+    "@nearbyevcharging.com/auth": "*",
+    "@nearbyevcharging.com/db": "*",
     "@trpc/client": "^10.14.0",
     "@trpc/server": "^10.14.0",
     "superjson": "1.9.1",
     "zod": "^3.20.6"
   },
   "devDependencies": {
-    "@ev/eslint-config": "*",
-    "@ev/tsconfig": "*",
+    "@nearbyevcharging.com/eslint-config": "*",
+    "@nearbyevcharging.com/tsconfig": "*",
     "eslint": "^8.34.0",
     "typescript": "^4.9.5"
   }

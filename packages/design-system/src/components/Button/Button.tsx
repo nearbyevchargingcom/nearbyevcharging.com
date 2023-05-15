@@ -1,5 +1,5 @@
 import { forwardRef, type ComponentPropsWithoutRef } from "react";
-import { cn } from "@myapp/utils";
+import { cn } from "@ev/utils";
 
 import { buttonVariants, type ButtonVariants } from "./Button.variants";
 

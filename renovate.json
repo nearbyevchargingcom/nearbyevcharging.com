@@ -3,7 +3,7 @@
   "extends": ["config:base"],
   "packageRules": [
     {
-      "matchPackagePatterns": ["^@myapp/", "@myapp/eslint-config"],
+      "matchPackagePatterns": ["^@ev/", "@ev/eslint-config"],
       "enabled": false
     }
   ],

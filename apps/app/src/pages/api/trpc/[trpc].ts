@@ -1,4 +1,4 @@
-import { appRouter, createTRPCContext } from "@myapp/api";
+import { appRouter, createTRPCContext } from "@ev/api";
 import { createNextApiHandler } from "@trpc/server/adapters/next";
 
 // export API handler

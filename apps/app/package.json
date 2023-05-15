@@ -1,5 +1,5 @@
 {
-  "name": "@myapp/app",
+  "name": "@ev/app",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,11 +12,11 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@myapp/api": "*",
-    "@myapp/auth": "*",
-    "@myapp/db": "*",
-    "@myapp/design-system": "*",
-    "@myapp/tailwind-config": "*",
+    "@ev/api": "*",
+    "@ev/auth": "*",
+    "@ev/db": "*",
+    "@ev/design-system": "*",
+    "@ev/tailwind-config": "*",
     "@next/font": "^13.2.4",
     "@tanstack/react-query": "^4.24.10",
     "@trpc/client": "^10.14.0",
@@ -31,8 +31,8 @@
     "zod": "^3.20.6"
   },
   "devDependencies": {
-    "@myapp/eslint-config": "*",
-    "@myapp/tsconfig": "*",
+    "@ev/eslint-config": "*",
+    "@ev/tsconfig": "*",
     "@types/node": "^18.0.0",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",

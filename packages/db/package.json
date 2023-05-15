@@ -1,5 +1,5 @@
 {
-  "name": "@myapp/db",
+  "name": "@ev/db",
   "version": "0.1.0",
   "main": "./index.ts",
   "types": "./index.ts",
@@ -14,7 +14,7 @@
     "@prisma/client": "^4.11.0"
   },
   "devDependencies": {
-    "@myapp/tsconfig": "*",
+    "@ev/tsconfig": "*",
     "prisma": "^4.11.0",
     "typescript": "^4.9.5"
   }

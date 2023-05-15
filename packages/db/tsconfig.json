@@ -1,4 +1,4 @@
 {
-  "extends": "@myapp/tsconfig/base.json",
+  "extends": "@ev/tsconfig/base.json",
   "include": ["index.ts"]
 }

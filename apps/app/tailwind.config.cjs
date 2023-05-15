@@ -2,7 +2,7 @@
 const config = {
   content: ["./src/**/*.tsx"],
   // @ts-ignore
-  presets: [require("@myapp/tailwind-config")],
+  presets: [require("@ev/tailwind-config")],
 };
 
 module.exports = config;

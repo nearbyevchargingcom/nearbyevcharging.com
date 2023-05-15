@@ -1,6 +1,7 @@
 {
-  "name": "nearbyevcharging.com",
-  "private": false,
+  "name": "nearbyevcharging-monorepo",
+  "version": "1.0.0",
+  "private": true,
   "engines": {
     "node": ">=18.0.0"
   },
@@ -30,7 +31,7 @@
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4",
-    "turbo": "^1.8.3",
+    "turbo": "^1.9.4",
     "typescript": "^4.9.5"
   },
   "devDependencies": {

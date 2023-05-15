@@ -1,8 +1,7 @@
 /** @type {import("tailwindcss").Config} */
 const config = {
   content: ["./src/**/*.tsx"],
-  // @ts-ignore
-  presets: [require("@nearbyevcharging.com/tailwind-config")],
+  plugins: [require("@tailwindcss/typography"),require("daisyui")],
 };
 
 module.exports = config;

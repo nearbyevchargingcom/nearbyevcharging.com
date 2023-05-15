@@ -1,5 +1,4 @@
 import "~/styles/globals.css";
-import "@nearbyevcharging.com/design-system/styles.css";
 import type { AppType } from "next/app";
 import { Inter } from "@next/font/google";
 import type { Session } from "next-auth";
@@ -22,7 +21,7 @@ const MyApp: MyAppType = ({
 
   return (
     <SessionProvider session={session}>
-      <main className={inter.className}>
+      <main data-theme="light" className={inter.className}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

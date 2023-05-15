@@ -1,6 +1,6 @@
 {
   "name": "nearbyevchariging.com",
-  "private": true,
+  "private": false,
   "engines": {
     "node": ">=18.0.0"
   },

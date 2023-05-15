@@ -2,14 +2,14 @@ import { z } from "zod";
 
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
-export const postRouter = createTRPCRouter({
+export const userRouter = createTRPCRouter({
   all: publicProcedure.query(({ ctx }) => {
-    return ctx.prisma.post.findMany({ orderBy: { id: "desc" } });
+    return ctx.prisma.user.findMany({ orderBy: { id: "desc" } });
   }),
   byId: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(({ ctx, input }) => {
-      return ctx.prisma.post.findFirst({ where: { id: input.id } });
+      return ctx.prisma.user.findFirst({ where: { id: input.id } });
     }),
   create: publicProcedure
     .input(
@@ -19,9 +19,9 @@ export const postRouter = createTRPCRouter({
       }),
     )
     .mutation(({ ctx, input }) => {
-      return ctx.prisma.post.create({ data: input });
+      return ctx.prisma.user.create({ data: input });
     }),
   delete: publicProcedure.input(z.string()).mutation(({ ctx, input }) => {
-    return ctx.prisma.post.delete({ where: { id: input } });
+    return ctx.prisma.user.delete({ where: { id: input } });
   }),
 });

@@ -1,14 +1,13 @@
+import React from "react";
 import Head from "next/head";
 import { type LayoutChildren } from "types";
 
 import Banner from "~/components/Banner/Banner";
-import Client from "~/components/Client";
-import Feature from "~/components/Features/Feature";
 import Footer from "~/components/Footer/Footer";
-import Hero from "~/components/Hero/HomeHero";
+import PricingComponent from "~/components/Pricing/PricingComponent";
 import Header from "~/components/navbar/Header";
 
-const Home = () => {
+const Pricing = () => {
   return (
     <>
       <Head>
@@ -19,22 +18,20 @@ const Home = () => {
         <meta
           name="description"
           content="EV Electric Vehicle Charging | Empowering Mobility through Electric
-          Vehicles"
+            Vehicles"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
       <Header />
-      <Hero />
-      <Client />
-      <Feature />
+      <PricingComponent />
       <Footer />
     </>
   );
 };
 
-Home.layout = ({ children }: LayoutChildren) => (
+Pricing.layout = ({ children }: LayoutChildren) => (
   <div className="min-w-screen min-h-screen">{children}</div>
 );
 
-export default Home;
+export default Pricing;

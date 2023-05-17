@@ -16,12 +16,10 @@ const config = {
   eslint: { ignoreDuringBuilds: !!process.env.CI },
   typescript: { ignoreBuildErrors: !!process.env.CI },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "tailwindui.com",
-      },
-    ],
+    domains: ["tailwindui.com"],
+    loader: "default",
+    formats: ["image/avif", "image/webp"],
+    dangerouslyAllowSVG: true,
   },
 };
 

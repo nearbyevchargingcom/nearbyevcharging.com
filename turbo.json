@@ -16,7 +16,7 @@
     },
     "build": {
       "dependsOn": ["^build", "^db:generate"],
-      "outputs": [".next/**", ".expo/**"]
+      "outputs": [".next/**", "!.next/cache/**"]
     },
     "lint": {},
     "lint:fix": {},
@@ -29,6 +29,29 @@
     "type-check": {
       "dependsOn": ["^db:generate"],
       "cache": false
+    },
+    "deploy": {
+      "dependsOn": ["^build", "^db:generate"],
+      "outputs": [".next/**", ".expo/**"],
+      "env": [
+        "CI",
+        "DATABASE_URL",
+        "DISCORD_CLIENT_ID",
+        "DISCORD_CLIENT_SECRET",
+        "CLIENT_ID",
+        "CLIENT_SECRET",
+        "NEXTAUTH_SECRET",
+        "NEXTAUTH_URL",
+        "NODE_ENV",
+        "SKIP_ENV_VALIDATION",
+        "VERCEL",
+        "VERCEL_URL"
+      ]
+    },
+    "//#format": {
+      "dependsOn": [],
+      "outputs": ["dist/**/*"],
+      "inputs": ["version.txt"]
     }
   },
   "globalEnv": [

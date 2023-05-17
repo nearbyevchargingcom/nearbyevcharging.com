@@ -1,5 +1,4 @@
 import { type inferRouterInputs, type inferRouterOutputs } from "@trpc/server";
-
 import { type AppRouter } from "./src/root";
 
 export { appRouter, type AppRouter } from "./src/root";
@@ -17,5 +16,7 @@ export type RouterInputs = inferRouterInputs<AppRouter>;
  **/
 export type RouterOutputs = inferRouterOutputs<AppRouter>;
 
-export type PriceModel = RouterOutputs["pricing"]["create"]
-export type PriceModel = RouterOutputs["pricing"]["create"]
+export type User = RouterOutputs["user"]["create"];
+
+export type PricingSchema = RouterOutputs["pricing"]["create"];
+export type FeatureSchema = RouterOutputs["feature"]["create"];

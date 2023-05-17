@@ -1,9 +1,7 @@
 import { z } from "zod";
-
 import { createTRPCRouter, publicProcedure } from "../trpc";
 
-
-export const pricingRouter = createTRPCRouter({
+export const featureRouter = createTRPCRouter({
   all: publicProcedure.query(({ ctx }) => {
     return ctx.prisma.pricingModel.findMany({ orderBy: { id: "desc" } });
   }),
@@ -13,7 +11,16 @@ export const pricingRouter = createTRPCRouter({
       return ctx.prisma.pricingModel.findFirst({ where: { id: input.id } });
     }),
   create: publicProcedure
-    .input(PricingModelCreateInput)
+    .input(
+      z.object({
+        id: z.string(),
+        planName: z.string(),
+        description: z.string(),
+        monthlyPrice: z.string(),
+        yearlyPrice: z.string(),
+        isBanner: z.boolean(),
+      }),
+    )
     .mutation(({ ctx, input }) => {
       return ctx.prisma.pricingModel.create({
         data: input,

@@ -1,6 +1,5 @@
 import React from "react";
-import { type PricingCardModel } from "types";
-
+import { type PricingCardModel } from "@nearbyevcharging.com/types";
 import PricingCard from "./PricingCard";
 
 const pricingCards: PricingCardModel[] = [

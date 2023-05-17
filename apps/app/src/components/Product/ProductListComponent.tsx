@@ -1,14 +1,12 @@
-import React from 'react'
-import ProductComponent from './ProductComponent'
+import React from "react";
+import ProductComponent from "./ProductComponent";
 
-type Props = {}
-
-function ProductListComponent({}: Props) {
+function ProductListComponent() {
   return (
     <>
-    <ProductComponent />
+      <ProductComponent />
     </>
-  )
+  );
 }
 
-export default ProductListComponent
+export default ProductListComponent;

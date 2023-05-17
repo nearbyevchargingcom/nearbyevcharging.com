@@ -1,0 +1,17 @@
+# Ignore files and directories generated during development
+node_modules
+.next
+out
+dist
+.cache
+
+# Ignore development-specific files
+*.log
+#.env
+
+# Ignore version control files
+.git
+.gitignore
+
+# Ignore build artifacts
+.DS_Store

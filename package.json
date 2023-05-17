@@ -7,8 +7,10 @@
   },
   "packageManager": "pnpm@7.29.1",
   "scripts": {
-    "ci:publish": "pnpm publish -r",
+    "publish": "pnpm publish -r",
     "build": "pnpm with-env turbo build",
+    "docker": "npx turbo prune --scope=\"app\" --docker",
+    "start": "pnpm with-env turbo run deploy",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "db:generate": "pnpm with-env turbo db:generate",

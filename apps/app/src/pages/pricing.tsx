@@ -1,7 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { type LayoutChildren } from "types";
-
+import { type LayoutChildren } from "@nearbyevcharging.com/types";
 import Banner from "~/components/Banner/Banner";
 import Footer from "~/components/Footer/Footer";
 import PricingComponent from "~/components/Pricing/PricingComponent";

@@ -11,15 +11,15 @@ datasource db {
 }
 
 model Example {
-    id String @id @default(auto()) @map("_id") @db.ObjectId
+    id        String   @id @default(auto()) @map("_id") @db.ObjectId
     createdAt DateTime @default(now())
     updatedAt DateTime @updatedAt
 }
 
 // Necessary for Next auth
 model Account {
-    id String @id @default(auto()) @map("_id") @db.ObjectId
-    userId            String @unique
+    id                String  @id @default(auto()) @map("_id") @db.ObjectId
+    userId            String  @unique @db.ObjectId
     type              String
     provider          String
     providerAccountId String
@@ -36,15 +36,15 @@ model Account {
 }
 
 model Session {
-    id String @id @default(auto()) @map("_id") @db.ObjectId
+    id           String   @id @default(auto()) @map("_id") @db.ObjectId
     sessionToken String   @unique
-    userId       String
+    userId       String   @db.ObjectId
     expires      DateTime
     user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
 model User {
-    id String @id @default(auto()) @map("_id") @db.ObjectId
+    id            String    @id @default(auto()) @map("_id") @db.ObjectId
     name          String?
     email         String?   @unique
     emailVerified DateTime?
@@ -54,11 +54,27 @@ model User {
 }
 
 model VerificationToken {
-    id String @id @default(auto()) @map("_id") @db.ObjectId
-    identifier String 
+    id         String   @id @default(auto()) @map("_id") @db.ObjectId
+    identifier String
     token      String   @unique
     expires    DateTime
 
-
     @@unique([identifier, token])
+}
+
+model PricingModel {
+    id           String         @id @default(auto()) @map("_id") @db.ObjectId
+    planName     String
+    description  String
+    monthlyPrice String
+    yearlyPrice  String
+    isBanner     Boolean
+    features     FeatureModel[]
+}
+
+model FeatureModel {
+    featureId    String       @id @default(auto()) @map("_id") @db.ObjectId
+    title        String
+    price        PricingModel @relation(fields: [priceModelId], references: [id], onDelete: Cascade)
+    priceModelId String       @db.ObjectId
 }

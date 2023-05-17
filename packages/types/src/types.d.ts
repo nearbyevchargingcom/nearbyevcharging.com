@@ -1,4 +1,4 @@
-interface LayoutChildren {
+export interface LayoutChildren {
   children: React.ReactNode;
 }
 
@@ -8,10 +8,12 @@ export interface PricingCardModel {
   description?: string;
   pricePerMonth?: string;
   pricePerYearly?: string;
-  isBusiness?: boolean = false,
-  buttonName : string,
+  isBusiness?: boolean;
+  buttonName: string;
   features?: FeatureNameModel[];
 }
+
+
 
 export interface FeatureNameModel {
   id: string;

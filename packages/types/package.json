@@ -1,0 +1,36 @@
+{
+  "name": "@nearbyevcharging.com/types",
+  "version": "0.0.1",
+  "private": true,
+  "main": "./src/index.d.ts",
+  "types": "./src/index.d.ts",
+  "sideEffects": false,
+  "license": "MIT",
+  "files": [
+    "src/**/*"
+  ],
+  "scripts": {
+    "tsc": "tsc -p tsconfig.json",
+    "prepublishOnly": "npm run tsc",
+    "build": "npx tsc -p tsconfig.json  --noEmit",
+    "dev": "npx tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "lint:fix": "pnpm lint --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist"
+  },
+  "devDependencies": {
+    "@nearbyevcharging.com/eslint-config": "*",
+    "@nearbyevcharging.com/tsconfig": "*",
+    "@nearbyevcharging.com/utils": "*",
+    "eslint": "^8.34.0",
+    "typescript": "^4.9.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "csstype": "^3.1.2",
+    "zod-prisma-types": "^2.7.1"
+  }
+}

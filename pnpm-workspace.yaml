@@ -3,6 +3,7 @@ packages:
   - packages/api
   - packages/auth
   - packages/db
-  - packages/design-system
+  # - packages/ui
   - packages/utils
+  - packages/types
   - packages/config/*

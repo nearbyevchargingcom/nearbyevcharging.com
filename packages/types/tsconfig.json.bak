@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "module": "Commonjs",
+    "sourceMap": true,
+    "target": "ES2017",
+    "noImplicitAny": true,
+    "declaration": true,
+    "outDir": "dist"
+  },
+  "include": ["src/**/*", "src/types.d.ts"],
+  "exclude": ["node_modules"]
+}

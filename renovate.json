@@ -5,7 +5,12 @@
     {
       "matchPackagePatterns": [
         "^@nearbyevcharging.com/",
-        "@nearbyevcharging.com/eslint-config"
+        "@nearbyevcharging.com/eslint-config",
+        "@nearbyevcharging.com/api",
+        "@nearbyevcharging.com/db",
+        "@nearbyevcharging.com/auth",
+        "@nearbyevcharging.com/utils",
+        "@nearbyevcharging.com/types"
       ],
       "enabled": false
     }

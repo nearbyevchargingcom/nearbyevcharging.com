@@ -8,8 +8,8 @@ export interface PricingCardModel {
   description?: string;
   pricePerMonth?: string;
   pricePerYearly?: string;
-  isBusiness?: boolean,
-  buttonName : string,
+  isBusiness?: boolean;
+  buttonName: string;
   features?: FeatureNameModel[];
 }
 

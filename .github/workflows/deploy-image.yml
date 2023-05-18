@@ -9,8 +9,24 @@ env:
   IMAGE_NAME: ${{ github.repository }}
 
 jobs:
+  build:
+    name: Lint Code Base
+    runs-on: self-hosted
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Lint Code Base
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_ALL_CODEBASE: true
+          VALIDATE_JAVASCRIPT_ES: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
   build-and-push-image:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     env:
       DATABASE_URL: ${{ secrets.DATABASE_URL }}
       NEXTAUTH_SECRET: ${{ secrets.NEXTAUTH_SECRET }}
@@ -36,6 +52,7 @@ jobs:
 
       - name: "Create env file"
         run: |
+          touch .env
           NEXTAUTH_SECRET= ${{ secrets.NEXTAUTH_SECRET }} >> .env
           DATABASE_URL= ${{ secrets.DATABASE_URL }} >> .env
           echo DISCORD_CLIENT_ID= ${{ secrets.DISCORD_CLIENT_ID }} >> .env

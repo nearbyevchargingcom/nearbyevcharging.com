@@ -11,7 +11,7 @@ env:
 jobs:
   build:
     name: Lint Code Base
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout Code
         uses: actions/checkout@v3

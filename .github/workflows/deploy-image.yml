@@ -50,18 +50,6 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: "Create env file"
-        run: |
-          touch .env
-          NEXTAUTH_SECRET= ${{ secrets.NEXTAUTH_SECRET }} >> .env
-          DATABASE_URL= ${{ secrets.DATABASE_URL }} >> .env
-          echo DISCORD_CLIENT_ID= ${{ secrets.DISCORD_CLIENT_ID }} >> .env
-          echo DISCORD_CLIENT_SECRET= ${{ secrets.DISCORD_CLIENT_SECRET }} >> .env
-          echo CLIENT_ID= ${{ secrets.CLIENT_ID }} >> .env
-          echo CLIENT_SECRET= ${{ secrets.CLIENT_SECRET }} >> .env
-          echo NEXTAUTH_URL= ${{ secrets.NEXTAUTH_URL }} >> .env
-          cat .env
-
       - name: Extract metadata (tags, labels) for Docker
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7

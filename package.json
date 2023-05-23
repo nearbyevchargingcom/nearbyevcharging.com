@@ -9,6 +9,10 @@
   "scripts": {
     "ci:publish": "pnpm publish -r",
     "build": "pnpm with-env turbo build  --parallel",
+    "publish": "pnpm publish -r",
+    "build": "pnpm with-env turbo build",
+    "docker": "npx turbo prune --scope=\"app\" --docker",
+    "start": "pnpm with-env turbo run deploy",
     "clean": "git clean -xdf node_modules",
     "clean:workspaces": "turbo clean",
     "db:generate": "pnpm with-env turbo db:generate",
@@ -18,9 +22,11 @@
     "start": "pnpm with-env turbo dev --parallel",
     "format": "prettier --write \"**/*.{js,cjs,mjs,ts,tsx,md,json}\" --ignore-path .gitignore",
     "lint": "turbo lint && manypkg check",
+    "test": "turbo lint && manypkg check",
     "lint:fix": "turbo lint:fix && manypkg fix",
     "type-check": "turbo type-check",
-    "with-env": "dotenv -e .env --"
+    "with-env": "dotenv -e .env --",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@eslint/js": "^8.37.0",
@@ -30,6 +36,7 @@
     "@types/prettier": "^2.7.2",
     "dotenv-cli": "^7.1.0",
     "eslint": "^8.34.0",
+    "husky": "^8.0.3",
     "postcss-import": "^15.1.0",
     "prettier": "^2.8.4",
     "prettier-plugin-tailwindcss": "^0.2.4",

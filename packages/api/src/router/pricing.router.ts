@@ -14,6 +14,20 @@ export const pricingRouter = createTRPCRouter({
     .input(z.object({ id: z.string() }))
     .query(({ ctx, input }) => {
       return ctx.prisma.pricingModel.findFirst({ where: { id: input.id } });
+    .input(
+      z.object({
+        id: z.string(),
+        planName: z.string(),
+        description: z.string(),
+        monthlyPrice: z.string(),
+        yearlyPrice: z.string(),
+        isBanner: z.boolean(),
+      }),
+    )
+    .mutation(({ ctx, input }) => {
+      return ctx.prisma.pricingModel.create({
+        data: input,
+      });
     }),
   delete: publicProcedure.input(z.string()).mutation(({ ctx, input }) => {
     return ctx.prisma.pricingModel.delete({ where: { id: input } });

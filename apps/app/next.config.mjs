@@ -21,6 +21,7 @@ const config = {
     formats: ["image/avif", "image/webp"],
     dangerouslyAllowSVG: true,
   },
+  distDir: "build",
 };
 
 export default config;

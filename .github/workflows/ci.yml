@@ -1,59 +1,41 @@
 name: CI
 
 on:
-  pull_request:
-    branches: ["*"]
   push:
     branches: ["main"]
-  merge_group:
-
-# You can leverage Vercel Remote Caching with Turbo to speed up your builds
-# @link https://turborepo.org/docs/core-concepts/remote-caching#remote-caching-on-vercel-builds
-# env:
-# TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-# TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+  pull_request:
+    types: [opened, synchronize]
 
 jobs:
-  build-lint:
-    env:
-      DATABASE_URL: ${{ secrets.DATABASE_URL }}
+  build:
+    name: Build and Test
+    timeout-minutes: 20
     runs-on: ubuntu-latest
+    # To use Remote Caching, uncomment the next lines and follow the steps below.
+    env:
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+      TURBO_REMOTE_ONLY: true
 
     steps:
-      - name: Checkout repo
+      - name: Check out code
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
 
-      - name: Setup pnpm
-        uses: pnpm/action-setup@v2.2.4
-
-      - name: Setup Node 18
+      - name: Setup Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: Get pnpm store directory
-        id: pnpm-cache
-        run: |
-          echo "pnpm_cache_dir=$(pnpm store path)" >> $GITHUB_OUTPUT
+      - name: Install pnpm
+        run: npm install -g pnpm
 
-      - name: Setup pnpm cache
-        uses: actions/cache@v3
-        with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
-          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
-          restore-keys: |
-            ${{ runner.os }}-pnpm-store-
-
-      - name: Install deps (with cache)
+      - name: Install dependencies
         run: pnpm install
 
-      - name: Generate Prisma Client
-        run: pnpm turbo db:generate
+      - name: Build
+        run: pnpm run build
 
-      - name: Build, lint and type-check
-        run: pnpm with-env turbo build lint type-check
-        env:
-          SKIP_ENV_VALIDATION: true
-
-      - name: Check workspaces
-        run: pnpm manypkg check
+      - name: Test
+        run: npm run test

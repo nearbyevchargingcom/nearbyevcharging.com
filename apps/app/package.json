@@ -4,12 +4,16 @@
   "private": false,
   "scripts": {
     "build": "next build",
+    "deploy": "dotenv -e .env -- next start",
     "clean": "git clean -xdf .next .turbo node_modules",
     "dev": "next dev",
     "lint": "SKIP_ENV_VALIDATION=1 next lint",
     "lint:fix": "pnpm lint --fix",
     "start": "next start",
     "type-check": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=18.0.0"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.14",
@@ -18,8 +22,8 @@
     "@nearbyevcharging.com/auth": "*",
     "@nearbyevcharging.com/db": "*",
     "@nearbyevcharging.com/tailwind-config": "*",
-    "@nearbyevcharging.com/utils": "*",
     "@nearbyevcharging.com/types": "*",
+    "@nearbyevcharging.com/utils": "*",
     "@next/font": "^13.2.4",
     "@tailwindcss/typography": "^0.5.9",
     "@tanstack/react-query": "^4.24.10",

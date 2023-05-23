@@ -1,11 +1,7 @@
-import React from 'react'
+import React from "react";
 
-type Props = {}
+const ProductComponent = () => {
+  return <div>ProductComponent</div>;
+};
 
-const ProductComponent = (props: Props) => {
-  return (
-    <div>ProductComponent</div>
-  )
-}
-
-export default ProductComponent
+export default ProductComponent;

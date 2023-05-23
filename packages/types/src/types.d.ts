@@ -13,8 +13,6 @@ export interface PricingCardModel {
   features?: FeatureNameModel[];
 }
 
-
-
 export interface FeatureNameModel {
   id: string;
   featureName?: string;

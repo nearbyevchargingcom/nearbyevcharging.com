@@ -1,9 +1,8 @@
 import "~/styles/globals.css";
-import type { AppType } from "next/app";
 import { Inter } from "@next/font/google";
 import type { Session } from "next-auth";
 import { SessionProvider } from "next-auth/react";
-
+import type { AppType } from "next/app";
 import { api } from "~/services/api";
 
 type MyAppType = AppType<{ session: Session | null }>;

@@ -1,0 +1,10 @@
+{
+  "name": "@nearbyevcharging.com/tsconfig",
+  "version": "0.0.0",
+  "private": false,
+  "files": [
+    "base.json",
+    "nextjs.json",
+    "react-library.json"
+  ]
+}

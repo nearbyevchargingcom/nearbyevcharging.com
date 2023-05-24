@@ -1,0 +1,20 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "extends": ["config:base"],
+  "packageRules": [
+    {
+      "matchPackagePatterns": [
+        "^@nearbyevcharging.com/consoleapp",
+        "^@nearbyevcharging.com/app",
+        "@nearbyevcharging.com/eslint-config",
+        "@nearbyevcharging.com/api",
+        "@nearbyevcharging.com/db",
+        "@nearbyevcharging.com/auth",
+        "@nearbyevcharging.com/utils",
+        "@nearbyevcharging.com/types"
+      ],
+      "enabled": false
+    }
+  ],
+  "updateInternalDeps": true
+}

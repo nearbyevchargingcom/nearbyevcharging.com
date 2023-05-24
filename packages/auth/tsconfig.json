@@ -1,0 +1,4 @@
+{
+  "extends": "@nearbyevcharging.com/tsconfig/base.json",
+  "include": ["src", "index.ts"]
+}
